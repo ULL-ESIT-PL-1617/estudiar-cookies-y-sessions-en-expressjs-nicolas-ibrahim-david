@@ -15,18 +15,19 @@ app.get('/', function(req, res) {
   res.send("visit localhost:8080/cookie")
 });
 
+//Show the name and the value of the cookie
 app.get('/show', function(req, res) {
   console.log("Cookies :  "+util.inspect(req.cookies));
   res.send("Cookies :  "+util.inspect(req.cookies));
 });
 
+//Delete the cookie
 app.get('/clear', function(req,res){
      res.clearCookie('name_of_cookie');
      res.send('Cookie deleted');
 });
 
-var server = app.listen(8080, function () {
-
+  var server = app.listen(8080, function () {
   var host = server.address().address
   var port = server.address().port
 
