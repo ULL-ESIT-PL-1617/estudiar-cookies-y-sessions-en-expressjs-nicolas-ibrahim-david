@@ -36,8 +36,7 @@ app.get('/logout', function (req, res) {
 // Si estás logueado, puedes accerder
 app.get('/content', auth, function (req, res) {
     res.send("You can only see this after you've logged in.");
-    console.log(req.session.username);
 });
  
 app.listen(8080);
-console.log("app running at http://localhost:3000");
+console.log("app running at http://localhost:8080");
