@@ -29,6 +29,7 @@ app.get('/', function (req, res, next) {
   res.end(req.session.views + ' views')
 })
 
+//Reset the views
 app.get('/clear', function(req, res, next){
      res.clearCookie('session');
      res.send('Cookie deleted, the number of view is 0 now.');
