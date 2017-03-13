@@ -3,14 +3,15 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
+app.use(express.static(__dirname + '/docs'));
 app.use(express.static(__dirname + '/_book'));
 
 app.get('/', function(req, res) {
-  res.send('Hola');
+  res.send('Hola Heroku');
 });
 
-app.get('/book', function(req, res) {
-  res.redirect('/_book/index.html');
+app.get('/', function(req, res) {
+  res.redirect('index.html');
 });
 
 app.listen(app.get('port'), function() {
