@@ -6,7 +6,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/docs'));
 
 app.get('/', function(req, res) {
-  res.send('HOME PAGE');
+  res.redirect('/_book/index.html');
 });
 
 app.listen(app.get('port'), function() {
