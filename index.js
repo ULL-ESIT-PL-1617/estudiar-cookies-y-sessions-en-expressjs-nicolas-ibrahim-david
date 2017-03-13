@@ -11,7 +11,7 @@ app.set('views', path.join(process.env.PWD, 'public'));
 app.use(express.static(path.join(process.env.PWD, 'public')));
 
 app.get('/', function(req, res) {
-    res.send('<html><body><a href="_book/index.html">Enlace al libro</a></body></html>');
+    res.send('<html><body><a href="index.html">Enlace al libro</a></body></html>');
 });
 
 // Escucha de la app
