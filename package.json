@@ -9,6 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "devDependencies": {
     "body-parser": "^1.17.1",
     "cookie-parser": "^1.4.3",
@@ -17,5 +18,11 @@
     "express-session": "^1.15.1",
     "gulp": "^3.9.1",
     "gulp-shell": "^0.6.3"
+=======
+  "dependencies": {
+    "express": "^4.15.2",
+    "path": "^0.12.7",
+    "static": "^2.0.0"
+>>>>>>> 8b812bb205e94a81f6743529d29707e90d940405
   }
 }
