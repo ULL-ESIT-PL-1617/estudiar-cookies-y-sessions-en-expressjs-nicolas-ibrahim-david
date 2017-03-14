@@ -5,11 +5,13 @@ var path        = require('path');
 process.env.PWD = process.cwd();
 
 app.set('port', (process.env.PORT || 5000));
+app.set('views', process.env.PWD + '/views');
+app.set('views engine', 'ejs');
 
 app.use(express.static(path.join(process.env.PWD, '/public')));
 
 app.get('/', function(req, res) {
-    res.send('<html><body><a href="index.html">Enlace al libro</a></body></html>');
+    res.render('index.ejs');
 });
 
 // Escucha de la app
