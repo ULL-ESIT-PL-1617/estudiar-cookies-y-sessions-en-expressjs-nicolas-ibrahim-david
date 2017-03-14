@@ -1,0 +1,404 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Query String · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Cookie_Management_in_Express.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Static
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Cookie.html">
+            
+                <a href="Cookie.html">
+            
+                    
+                    Cookies
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Cookie_MOdule.html">
+            
+                <a href="Cookie_MOdule.html">
+            
+                    
+                    Cookie Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Cookie_Management_in_Express.html">
+            
+                <a href="Cookie_Management_in_Express.html">
+            
+                    
+                    Express and cookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="Query_String.html">
+            
+                <a href="Query_String.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Query String</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="query-string">Query string</h1>
+<p>On the World Wide Web, a <strong>query string</strong> is the part of a uniform resource locator (URL) containing data that does not fit conveniently into a hierarchical path structure. The query string commonly includes fields added to a base URL by a Web browser or other client application, for example as part of an HTML form.
+![Example URL with the query string] (<a href="http://images.mxpnl.com/blog/2014-10-17%2000:30:48.190268-jnurl1.png" target="_blank">http://images.mxpnl.com/blog/2014-10-17%2000:30:48.190268-jnurl1.png</a>)</p>
+<h2 id="structure">Structure</h2>
+<p>A typical URL containing a query string is as follows:</p>
+<blockquote>
+<p><a href="http://example.com/over/there?name=chelo" target="_blank">http://example.com/over/there?name=chelo</a></p>
+</blockquote>
+<p>When a server receives a request for such a page, it may run a program, passing the query string, which in this case is, <em>name=ferret</em> unchanged, to the program. The first question mark is used as a separator, and is not part of the query string.
+A link in a web page may have a URL that contains a query string. HTML defines three ways a user agent can generate the query string:</p>
+<ul>
+<li>an HTML form </li>
+<li>a  server-side image map </li>
+<li><p>an indexed search </p>
+<h3 id="web-forms">Web forms</h3>
+<p>One of the original uses was to contain the content of an HTML form, also known as web form. In particular, when a form containing the fields <em>field1</em>, <em>field2</em>, <em>field3</em> is submitted, the content of the fields is encoded as a query string as follows:</p>
+<blockquote>
+<p>field1=value1&amp;field2=value2&amp;field3=value3...</p>
+</blockquote>
+</li>
+<li><p>The query string is composed of a series of field-value pairs.</p>
+</li>
+<li>Within each pair, the field name and value are separated by an <strong>equals sign</strong>, &apos;=&apos;.</li>
+<li>The series of pairs is separated by the <strong>ampersand</strong>, &apos;&amp;&apos; (or semicolon).</li>
+</ul>
+<p>While there is no definitive standard, most web frameworks allow multiple values to be associated with a single field.
+For each field of the form, the query string contains a pair <em>field=value</em>. Web forms may include fields that are not visible to the user; these fields are included in the query string when the form is submitted
+This convention is a <strong>W3C</strong> recommendation. W3C recommends that all web servers support semicolon separators in addition to ampersand separators to allow <em>application/x-www-form-urlencoded</em> query strings in URLs within HTML documents without having to entity escape ampersands.</p>
+<h3 id="indexed-search">Indexed search</h3>
+<p>Before forms were added to HTML, browsers rendered the <strong>&lt; isindex &gt;</strong> element as a single-line text-input control. The text entered into this control was sent to the server as a query string addition to a GET request for the base URL or another URL specified by the <em>action</em> attribute. This was intended to allow web servers to use the provided text as query criteria so they could return a list of matching pages.
+When the text input into the indexed search control is submitted, it is encoded as a query string as follows:</p>
+<blockquote>
+<p>argument1+argument2+argument3...</p>
+</blockquote>
+<ul>
+<li>The query string is composed of a series of arguments by parsing the text into words at the spaces.</li>
+<li>The series is separated by the plus sign, &apos;+&apos;.</li>
+</ul>
+<h2 id="url-encoding">URL Encoding</h2>
+<p>Some <strong>characters</strong> cannot be part of a URL (for example, the space) and some other characters have a special meaning in a URL: for example, the character # can be used to further specify a subsection (or fragment) of a document. In HTML forms, the character = is used to separate a name from a value. 
+<strong>HTML 5</strong> specifies the following transformation for submitting HTML forms with the &quot;get&quot; method to a web server:</p>
+<ul>
+<li>Characters that cannot be converted to the correct charset are replaced with HTML numeric character references</li>
+<li>SPACE is encoded as &apos;+&apos; or &apos;%20&apos;</li>
+<li>Letters (A&#x2013;Z and a&#x2013;z), numbers (0&#x2013;9) and the characters &apos;*&apos;,&apos;-&apos;,&apos;.&apos; and &apos;_&apos; are left as-is</li>
+<li>All other characters are encoded as %HH hex representation with any non-ASCII characters first encoded as UTF-8 (or other specified encoding)</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>If a form is embedded in an HTML page as follows:</p>
+<pre><code class="lang-javascript">&lt;form action=<span class="hljs-string">&quot;cgi-bin/test.cgi&quot;</span> method=<span class="hljs-string">&quot;get&quot;</span>&gt;
+  &lt;input type=&quot;text&quot; name=&quot;first&quot; /&gt;
+  &lt;input type=&quot;text&quot; name=&quot;second&quot; /&gt;
+  &lt;input type=&quot;submit&quot; /&gt;
+&lt;/form&gt;
+</code></pre>
+<p>and the user inserts the strings &#x201C;this is a field&#x201D; and &#x201C;was it clear (already)?&#x201D; in the two text fields and presses the submit button, the program <em>test.cgi</em> (the program specified by the <em>action</em> attribute of the form element in the above example) will receive the following query string:</p>
+<blockquote>
+<p>first=this+is+a+field&amp;second=was+it+clear+%28already%29%3F.</p>
+</blockquote>
+<h2 id="tracking">Tracking</h2>
+<p>A program receiving a query string can ignore part or all of it. If the requested URL corresponds to a file and not to a program, the whole query string is ignored. However, regardless of whether the query string is used or not, the whole URL including it is stored in the server log files.
+For example, when a web page containing the following is requested:</p>
+<pre><code class="lang-javascript"> &lt;a href=&quot;foo.html&quot;&gt;see my page!&lt;/a&gt;
+ &lt;a href=&quot;bar.html&quot;&gt;mine is better&lt;/a&gt;
+</code></pre>
+<p>a unique string, such as <em>e0a72cb2a2c7</em> is chosen, and the page is modified as follows:</p>
+<pre><code class="lang-javascript"> &lt;a href=&quot;foo.html?e0a72cb2a2c7&quot;&gt;see my page!&lt;/a&gt;
+ &lt;a href=&quot;bar.html?e0a72cb2a2c7&quot;&gt;mine is better&lt;/a&gt;
+</code></pre>
+<p>The addition of the query string does not change the way the page is shown to the user. When the user follows, for example, the first link, the browser requests the page <em>foo.html?e0a72cb2a2c7</em> to the server, which ignores what follows <em>?</em> and sends the page <em>foo.html</em> as expected, adding the query string to its links as well.
+This way, any subsequent page request from this user will carry the same query string <em>e0a72cb2a2c7</em>, making it possible to establish that all these pages have been viewed by the same user. Query strings are often used in association with web beacons.
+The main differences between query strings used for tracking and HTTP cookies are that:</p>
+<ol>
+<li>Query strings form part of the URL, and are therefore included if the user saves or sends the URL to another user; cookies can be maintained across browsing sessions, but are not saved or sent with the URL.</li>
+<li>If the user arrives at the same web server by two (or more) independent paths, it will be assigned two different query strings, while the stored cookies are the same.</li>
+<li>The user can disable cookies, in which case using cookies for tracking does not work. However, using query strings for tracking should work in all situations.</li>
+<li>Different query strings passed by different visits to the page will mean that the pages are never served from the browser (or proxy, if present) cache thereby increasing the load on the web server and slowing down the user experience.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Cookie_Management_in_Express.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Express and cookies">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Query String","level":"1.4","depth":1,"previous":{"title":"Express and cookies","level":"1.3.2","depth":2,"path":"Cookie_Management_in_Express.md","ref":"Cookie_Management_in_Express.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Query_String.md","mtime":"2017-03-13T22:05:05.063Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-14T17:11:54.452Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

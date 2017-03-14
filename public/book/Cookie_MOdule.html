@@ -1,0 +1,432 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Cookie Module · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Cookie_Management_in_Express.html" />
+    
+    
+    <link rel="prev" href="Cookie.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Routes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Static
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Cookie.html">
+            
+                <a href="Cookie.html">
+            
+                    
+                    Cookies
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="Cookie_MOdule.html">
+            
+                <a href="Cookie_MOdule.html">
+            
+                    
+                    Cookie Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Cookie_Management_in_Express.html">
+            
+                <a href="Cookie_Management_in_Express.html">
+            
+                    
+                    Express and cookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Query_String.html">
+            
+                <a href="Query_String.html">
+            
+                    
+                    Query String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Cookie Module</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="cookie-module">Cookie Module</h1>
+<h2 id="installation">Installation</h2>
+<blockquote>
+<p>$npm install cookie</p>
+</blockquote>
+<h2 id="api">API</h2>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> cookie = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cookie&apos;</span>);
+</code></pre>
+<h3 id="cookieparsestr-options">cookie.parse(str, options)</h3>
+<p>Parse an HTTP Cookie header string and returning an object of all cookie name-value pairs. The str argument is the string representing a Cookie header value and options is an optional object containing additional parsing options.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> cookies = cookie.parse(<span class="hljs-string">&apos;foo=bar; equation=E%3Dmc%5E2&apos;</span>);
+<span class="hljs-comment">// { foo: &apos;bar&apos;, equation: &apos;E=mc^2&apos; }</span>
+</code></pre>
+<h3 id="options">Options</h3>
+<p><em>cookie.parse</em> accepts these properties in the options object.</p>
+<h3 id="decode">Decode</h3>
+<p>Specifies a function that will be used to decode a cookie&apos;s value. Since the value of a cookie has a limited character set (and must be a simple string), this function can be used to decode a previously-encoded cookie value into a JavaScript string or other object.
+The default function is the global <em>decodeURIComponent</em>, which will decode any URL-encoded sequences into their byte representations.</p>
+<h3 id="cookieserializename-value-options">cookie.serialize(name, value, options)</h3>
+<p>Serialize a cookie name-value pair into a Set-Cookie header string. The name argument is the name for the cookie, the value argument is the value to set the cookie to, and the options argument is an optional object containing additional serialization options.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> setCookie = cookie.serialize(<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>);
+<span class="hljs-comment">// foo=bar</span>
+</code></pre>
+<h3 id="options">Options</h3>
+<p><em>cookie.serialize</em> accepts these properties in the options object.</p>
+<h3 id="domain">domain</h3>
+<p>Specifies the value for the <strong>Domain Set-Cookie attribute</strong>. By default, no domain is set, and most clients will consider the cookie to apply to only the current domain.</p>
+<h3 id="encode">encode</h3>
+<p>Specifies a function that will be used to encode a cookie&apos;s value. Since value of a cookie has a limited character set (and must be a simple string), this function can be used to encode a value into a string suited for a cookie&apos;s value.
+The default function is the global ecodeURIComponent, which will encode a JavaScript string into UTF-8 byte sequences and then URL-encode any that fall outside of the cookie range.</p>
+<h3 id="expires">expires</h3>
+<p>Specifies the Date object to be the value for the Expires Set-Cookie attribute. By default, no expiration is set, and most clients will consider this a &quot;non-persistent cookie&quot; and will delete it on a condition like exiting a web browser application.</p>
+<h3 id="httponly">httpOnly</h3>
+<p>Specifies the <em>boolean</em> value for the <em>[HttpOnly Set-Cookie attribute][rfc-6266-5.2.6]</em>. When truthy, the <strong>HttpOnly</strong> attribute is set, otherwise it is not. By default, the <em>HttpOnly</em> attribute is not set.</p>
+<h3 id="maxage">maxAge</h3>
+<p>Specifies the number (in seconds) to be the value for the <strong>Max-Age Set-Cookie attribute</strong>. The given number will be converted to an integer by rounding down. By default, no maximum age is set.</p>
+<h3 id="path">path</h3>
+<p>Specifies the value for the <strong>Path Set-Cookie attribute</strong>. By default, the path is considered the &quot;default path&quot;. By default, no maximum age is set, and most clients will consider this a &quot;non-persistent cookie&quot; and will delete it on a condition like exiting a web browser application.</p>
+<h3 id="samesite">sameSite</h3>
+<p>Specifies the boolean or string to be the value for the SameSite Set-Cookie attribute.</p>
+<ul>
+<li>true will set the SameSite attribute to Strict for strict same site enforcement.</li>
+<li>false will not set the SameSite attribute.</li>
+<li>&apos;lax&apos; will set the SameSite attribute to Lax for lax same site enforcement.</li>
+<li>&apos;strict&apos; will set the SameSite attribute to Strict for strict same site enforcement.</li>
+</ul>
+<h3 id="secure">secure</h3>
+<p>Specifies the boolean value for the [<em>Secure Set-Cookie attribute][rfc-6266-5.2.5]</em>. When truthy, the Secure attribute is set, otherwise it is not. By default, the Secure attribute is not set.</p>
+<h2 id="example">Example</h2>
+<p>The following example uses this module in conjunction with the <em>Node.js</em> core HTTP server to prompt a user for their name and display it back on future visits.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> cookie = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cookie&apos;</span>);
+<span class="hljs-keyword">var</span> escapeHtml = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;escape-html&apos;</span>);
+<span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">var</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onRequest</span>(<span class="hljs-params">req, res</span>) </span>{
+  <span class="hljs-comment">// Parse the query string </span>
+  <span class="hljs-keyword">var</span> query = url.parse(req.url, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>).query;
+
+  <span class="hljs-keyword">if</span> (query &amp;&amp; query.name) {
+    <span class="hljs-comment">// Set a new cookie with the name </span>
+    res.setHeader(<span class="hljs-string">&apos;Set-Cookie&apos;</span>, cookie.serialize(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-built_in">String</span>(query.name), {
+      httpOnly: <span class="hljs-literal">true</span>,
+      maxAge: <span class="hljs-number">60</span> * <span class="hljs-number">60</span> * <span class="hljs-number">24</span> * <span class="hljs-number">7</span> <span class="hljs-comment">// 1 week </span>
+    }));
+
+    <span class="hljs-comment">// Redirect back after setting cookie </span>
+    res.statusCode = <span class="hljs-number">302</span>;
+    res.setHeader(<span class="hljs-string">&apos;Location&apos;</span>, req.headers.referer || <span class="hljs-string">&apos;/&apos;</span>);
+    res.end();
+    <span class="hljs-keyword">return</span>;
+  }
+
+  <span class="hljs-comment">// Parse the cookies on the request </span>
+  <span class="hljs-keyword">var</span> cookies = cookie.parse(req.headers.cookie || <span class="hljs-string">&apos;&apos;</span>);
+
+  <span class="hljs-comment">// Get the visitor name set in the cookie </span>
+  <span class="hljs-keyword">var</span> name = cookies.name;
+
+  res.setHeader(<span class="hljs-string">&apos;Content-Type&apos;</span>, <span class="hljs-string">&apos;text/html; charset=UTF-8&apos;</span>);
+
+  <span class="hljs-keyword">if</span> (name) {
+    res.write(<span class="hljs-string">&apos;&lt;p&gt;Welcome back, &lt;b&gt;&apos;</span> + escapeHtml(name) + <span class="hljs-string">&apos;&lt;/b&gt;!&lt;/p&gt;&apos;</span>);
+  } <span class="hljs-keyword">else</span> {
+    res.write(<span class="hljs-string">&apos;&lt;p&gt;Hello, new visitor!&lt;/p&gt;&apos;</span>);
+  }
+
+  res.write(<span class="hljs-string">&apos;&lt;form method=&quot;GET&quot;&gt;&apos;</span>);
+  res.write(<span class="hljs-string">&apos;&lt;input placeholder=&quot;enter your name&quot; name=&quot;name&quot;&gt; &lt;input type=&quot;submit&quot; value=&quot;Set Name&quot;&gt;&apos;</span>);
+  res.end(<span class="hljs-string">&apos;&lt;/form&apos;</span>);
+}
+
+http.createServer(onRequest).listen(<span class="hljs-number">3000</span>);
+</code></pre>
+<h2 id="testing">Testing</h2>
+<blockquote>
+<p>$ npm test</p>
+</blockquote>
+<h2 id="license">License</h2>
+<p><a href="https://github.com/jshttp/cookie/blob/master/LICENSE" target="_blank">MIT</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Cookie.html" class="navigation navigation-prev " aria-label="Previous page: Cookies">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Cookie_Management_in_Express.html" class="navigation navigation-next " aria-label="Next page: Express and cookies">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Cookie Module","level":"1.3.1","depth":2,"next":{"title":"Express and cookies","level":"1.3.2","depth":2,"path":"Cookie_Management_in_Express.md","ref":"Cookie_Management_in_Express.md","articles":[]},"previous":{"title":"Cookies","level":"1.3","depth":1,"path":"Cookie.md","ref":"Cookie.md","articles":[{"title":"Cookie Module","level":"1.3.1","depth":2,"path":"Cookie_MOdule.md","ref":"Cookie_MOdule.md","articles":[]},{"title":"Express and cookies","level":"1.3.2","depth":2,"path":"Cookie_Management_in_Express.md","ref":"Cookie_Management_in_Express.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"Cookie_MOdule.md","mtime":"2017-03-13T22:05:05.049Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-14T17:11:54.452Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
