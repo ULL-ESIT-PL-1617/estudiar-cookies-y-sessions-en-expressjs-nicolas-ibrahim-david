@@ -1,6 +1,6 @@
 # Introduction
 Repositorios usados:
-- Gitbook: *https://git.gitbook.com/alu0100826166/estudiar-cookies.git*
+- Gitbook: *https://alu0100898293.gitbooks.io/cookies-ibrahim-david-nicolas/content/*
 - Heroku :
 *https://git.heroku.com/agile-shelf-51321.git*
 - Github : *https://github.com/ULL-ESIT-PL-1617/estudiar-cookies-y-sessions-en-expressjs-nicolas-ibrahim-david*
